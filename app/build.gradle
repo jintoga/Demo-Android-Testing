@@ -29,4 +29,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
     testCompile "org.robolectric:robolectric:3.4.2"
+    androidTestCompile 'org.mockito:mockito-core:2.+'
+    androidTestCompile 'com.linkedin.dexmaker:dexmaker-mockito:2.2.0'
+    androidTestCompile ('junit:junit:4.12') {
+        exclude module: 'hamcrest-core'
+    }
 }

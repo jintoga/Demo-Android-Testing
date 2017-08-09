@@ -1,6 +1,9 @@
 package com.dat.demotesting;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,5 +34,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+    }
+
+    public static void create(@NonNull Context context, @NonNull String username) {
+        if (context instanceof MainActivity) {
+            return;
+        }
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.putExtra(username, username);
+        context.startActivity(intent);
     }
 }

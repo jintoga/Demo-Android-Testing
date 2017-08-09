@@ -16,7 +16,7 @@ import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class)
-public class MainActivityTest {
+public class MainActivityUnitTest {
     private MainActivity mainActivity;
 
     @Before
@@ -31,7 +31,7 @@ public class MainActivityTest {
     }
 
     @Test
-    public void testClicking() throws Exception { 
+    public void testClicking() throws Exception {
         mainActivity.add.performClick();
         Assert.assertThat(mainActivity.result.getText().toString(), CoreMatchers.equalTo("2"));
     }
