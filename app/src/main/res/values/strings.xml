@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DemoTesting</string>
+    <string name="first_number_hint">first number</string>
+    <string name="second_number_hint">second number</string>
+    <string name="add_btn">Add</string>
+    <string name="multiply_btn">Multiply</string>
+    <string name="subtract_btn">Subtract</string>
+    <string name="divide_btn">Divide</string>
+</resources>
